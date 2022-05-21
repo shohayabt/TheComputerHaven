@@ -1,0 +1,124 @@
+.menuToggleBar {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.998);
+  cursor: pointer;
+  display: none;
+}
+.menuToggleBar svg {
+  color: white;
+}
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--veryDarkBlue);
+  position: relative;
+}
+.header-section .logo {
+  padding: 5px;
+  display: inline-block;
+}
+.header-section .logo a {
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.header-section .logo a > span {
+  color: var(--orange);
+}
+
+.main-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-menu ul li a {
+  display: inline-block;
+  padding: 10px 15px;
+  color: white;
+  font-size: 16px;
+  line-height: 50px;
+  font-weight: 500;
+}
+.main-menu ul li p {
+  color: white;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.main-menu ul li:hover a {
+  background: white;
+  color: var(--orange);
+}
+.nav-toggle {
+  display: none;
+}
+.nav-toggle > p {
+  color: white;
+}
+.signout {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  margin-left: 12px;
+}
+
+/* CSS FOR MOBILE DEVICES  HERE*/
+@media only screen and (max-width: 660px) {
+  .container {
+    width: 96%;
+  }
+  .main-menu {
+    display: none;
+  }
+  .show {
+    display: block;
+    position: absolute;
+    background: var(--veryDarkBlue);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  .signout {
+    margin-bottom: 12px;
+  }
+  .show ul {
+    text-align: center;
+  }
+  .show ul li {
+    display: block;
+  }
+  .show ul li > p {
+    color: white;
+    line-height: 30px;
+    padding-bottom: 10px;
+  }
+  .show ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+  .show ul li:hover a {
+    background: white;
+    color: var(--orange);
+  }
+  .menuToggleBar {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* CSS FOR MOBILE DEVICES END HERE */
