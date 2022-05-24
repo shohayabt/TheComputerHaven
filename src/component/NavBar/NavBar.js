@@ -1,13 +1,7 @@
-import React from "react";
-import "./NavBar.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import auth from "../../firebase";
-import { signOut } from "firebase/auth";
+import "./NavBar.css";
 export const NavBar = () => {
-  const [user, loading, error] = useAuthState(auth);
-
   const [navbar, setnavbar] = useState(false);
   const responsiveToggle = (e) => {
     if (navbar) {
@@ -18,36 +12,24 @@ export const NavBar = () => {
   };
 
   return (
-    <header className="header-section">
-      <div className="container d-flex-b">
+    <header className=" header-section px-10">
+      <div className="header-container">
         <div className="logo">
           <Link to="/">
-            CAR <span>DEALER</span>
+            <span>THE</span>
+            <span>COMPUTER</span>
+            <span>HAVEN</span>
           </Link>
         </div>
-        <nav className={!navbar ? "main-menu" : "show"}>
-          <ul>
-            <li>
-              <Link to="/">HOME</Link>
-            </li>
-            <li>
-              <Link to="/blog">BLOG</Link>
-            </li>
-            <li>{!user ? <></> : <Link to="/addProduct">ADD PRODUCT</Link>}</li>
-            <li>{!user ? <></> : <Link to="/myitems">MY ITEMS</Link>}</li>
-            <li>{!user ? <></> : <Link to="/management">MANAGEMENT</Link>}</li>
-            <li>{user ? <></> : <Link to="/login">LOGIN</Link>}</li>
-            <li>
-              {user ? (
-                <button className="btn signout" onClick={() => signOut(auth)}>
-                  SIGN OUT
-                </button>
-              ) : (
-                ""
-              )}
-            </li>
-          </ul>
-        </nav>
+        <div>
+          <nav className={!navbar ? "main-menu" : "show"}>
+            <ul>
+              <li>
+                <Link to="/home">HOME</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <div className="menuToggleBar" onClick={responsiveToggle}>
           {!navbar ? (
             <svg

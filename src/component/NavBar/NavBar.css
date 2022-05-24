@@ -3,7 +3,6 @@
   height: 40px;
   padding: 5px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.998);
   cursor: pointer;
   display: none;
 }
@@ -11,15 +10,14 @@
   color: white;
 }
 .header-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: var(--veryDarkBlue);
   position: relative;
 }
 .header-section .logo {
   padding: 5px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header-section .logo a {
   color: white;
@@ -31,6 +29,15 @@
   color: var(--orange);
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-menu {
+  display: flex;
+  justify-content: right;
+}
 .main-menu ul {
   display: flex;
   justify-content: center;
@@ -113,6 +120,9 @@
   }
   .menuToggleBar {
     display: flex;
+  }
+  .header-section .logo {
+    font-size: 23px;
   }
 }
 @media only screen and (max-width: 760px) {
