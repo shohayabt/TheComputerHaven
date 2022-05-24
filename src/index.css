@@ -20,26 +20,6 @@ li {
 }
 /* COMMON CSS END HERE  */
 /* COMMON CLASSES STARTED FROM HERE */
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
-.d-flex-c {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.d-flex-b {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.d-flex-col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 :root {
   --orange: hsl(25, 97%, 53%);
   --white: hsl(0, 0%, 100%);
@@ -48,7 +28,7 @@ li {
   --darkBlue: hsl(213, 19%, 18%);
   --veryDarkBlue: hsl(216, 12%, 8%);
 }
-.btn {
+.btn-custom {
   outline: 0px;
   border: 0px;
   padding: 10px 20px;
@@ -57,11 +37,11 @@ li {
   font-weight: 500px;
   font-size: 18px;
   display: inline-block;
-  margin-top: 20px;
   color: white;
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 5px;
+  width: 250px;
 }
 .title {
   text-align: center;
@@ -69,8 +49,5 @@ li {
   font-size: 35px;
   font-weight: 700;
   text-transform: uppercase;
-}
-.loading {
-  margin: 200px 0px 600px;
 }
 /* COMMON CLASSES END HERE  */

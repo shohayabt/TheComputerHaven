@@ -16,9 +16,7 @@ export const NavBar = () => {
       <div className="header-container">
         <div className="logo">
           <Link to="/">
-            <span>THE</span>
-            <span>COMPUTER</span>
-            <span>HAVEN</span>
+            I'm <span>Katie</span>
           </Link>
         </div>
         <div>
