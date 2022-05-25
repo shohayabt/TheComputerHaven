@@ -8,6 +8,7 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import toast, { Toaster } from "react-hot-toast";
+import Loading from "../Loading/Loading";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -26,13 +27,16 @@ const Login = () => {
     console.log(user || googleUser);
     navigate(from, { replace: true });
   }
-
+  const notify = (message) => toast(message);
   useEffect(() => {
-    const notify = (message) => toast(message);
     if (error) {
       notify(error.message);
     }
   }, [error, googleError]);
+  if (loading || googleLoading) {
+    return <Loading></Loading>;
+  }
+
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="card w-96 bg-base-100 shadow-xl px-8 py-5">

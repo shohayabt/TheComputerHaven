@@ -10,6 +10,7 @@ import {
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
+import Loading from "../Loading/Loading";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -44,6 +45,9 @@ const SignUp = () => {
       notify(error?.message || error?.message);
     }
   }, [error, googleError, updateProfileError]);
+  if (loading || googleLoading || updating || sending) {
+    return <Loading></Loading>;
+  }
   return (
     <section>
       <div className="flex justify-center items-center h-screen">
