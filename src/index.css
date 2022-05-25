@@ -43,6 +43,20 @@ li {
   border-radius: 5px;
   width: 250px;
 }
+.btn-full {
+  outline: 0px;
+  border: 0px;
+  padding: 10px 20px;
+  background: var(--orange);
+  color: var(--veryDarkBlue);
+  font-weight: 500px;
+  font-size: 18px;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+}
 .title {
   text-align: center;
   line-height: 120px;
