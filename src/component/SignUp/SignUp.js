@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import auth from "../../firebase";
 import {
@@ -11,6 +11,10 @@ import {
 } from "react-firebase-hooks/auth";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+
   // UPDATING PROFILE
   const [displayName, setDisplayName] = useState("");
   const [updateProfile, updating, updateProfileError] = useUpdateProfile(auth);
@@ -28,6 +32,11 @@ const SignUp = () => {
   // SEND  EMAIL VERIFICATION
   const [sendEmailVerification, sending, verificationError] =
     useSendEmailVerification(auth);
+  // NAVIGATE TO HOME
+  if (user || googleUser) {
+    console.log(user || googleUser);
+    navigate(from, { replace: true });
+  }
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="card w-96 bg-base-100 shadow-xl px-8 py-5">
