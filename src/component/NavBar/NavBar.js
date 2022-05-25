@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase";
+import { signOut } from "firebase/auth";
 export const NavBar = () => {
+  const [user] = useAuthState(auth);
   const [navbar, setnavbar] = useState(false);
   const responsiveToggle = (e) => {
     if (navbar) {
@@ -26,7 +30,19 @@ export const NavBar = () => {
                 <Link to="/home">HOME</Link>
               </li>
               <li>
-                <Link to="/login">LOGIN</Link>
+                <li>{user ? <></> : <Link to="/login">LOGIN</Link>}</li>
+              </li>
+              <li>
+                {user ? (
+                  <button
+                    className="btn-full signout"
+                    onClick={() => signOut(auth)}
+                  >
+                    SIGN OUT
+                  </button>
+                ) : (
+                  ""
+                )}
               </li>
             </ul>
           </nav>

@@ -61,10 +61,8 @@ const SignUp = () => {
               event.preventDefault();
               createUserWithEmailAndPassword(email, password);
               await updateProfile({ displayName });
-              if (user) {
-                await sendEmailVerification(email);
-                await notify("VERIFICATION MAIL SENT");
-              }
+              await sendEmailVerification(email);
+              await notify("VERIFICATION MAIL SENT");
             }}
           >
             <label className="label">
