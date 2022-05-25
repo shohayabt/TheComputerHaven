@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -9,8 +9,7 @@ import {
   useSignInWithGoogle,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
-import toast, { Toaster } from "react-hot-toast";
-import { async } from "@firebase/util";
+import toast from "react-hot-toast";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -39,10 +38,12 @@ const SignUp = () => {
     console.log(user || googleUser);
     navigate(from, { replace: true });
   }
-  if (error || googleError) {
-    const notify = async (message) => await toast(message);
-    notify(error?.message || error?.message);
-  }
+  const notify = async (message) => await toast(message);
+  useEffect(() => {
+    if (error || googleError || updateProfileError) {
+      notify(error?.message || error?.message);
+    }
+  }, [error, googleError, updateProfileError]);
   return (
     <section>
       <div className="flex justify-center items-center h-screen">
@@ -56,7 +57,10 @@ const SignUp = () => {
               event.preventDefault();
               createUserWithEmailAndPassword(email, password);
               await updateProfile({ displayName });
-              await sendEmailVerification(email);
+              if (user) {
+                await sendEmailVerification(email);
+                await notify("VERIFICATION MAIL SENT");
+              }
             }}
           >
             <label className="label">
