@@ -11,6 +11,7 @@ import {
 } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
 import Loading from "../Loading/Loading";
+import useToken from "../../Hooks/useToken";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -34,9 +35,10 @@ const SignUp = () => {
   // SEND  EMAIL VERIFICATION
   const [sendEmailVerification, sending, verificationError] =
     useSendEmailVerification(auth);
+  // USET TOKEN
+  const [token] = useToken(user, googleUser);
   // NAVIGATE TO HOME
-  if (user || googleUser) {
-    console.log(user || googleUser);
+  if (token) {
     navigate(from, { replace: true });
   }
   const notify = async (message) => await toast(message);

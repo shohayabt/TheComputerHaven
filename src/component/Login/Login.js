@@ -9,6 +9,7 @@ import {
 } from "react-firebase-hooks/auth";
 import toast, { Toaster } from "react-hot-toast";
 import Loading from "../Loading/Loading";
+import useToken from "../../Hooks/useToken";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -22,11 +23,14 @@ const Login = () => {
   // login-with-google-account
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
-
-  if (user || googleUser) {
-    console.log(user || googleUser);
-    navigate(from, { replace: true });
-  }
+  const [token] = useToken(user, googleUser);
+  useEffect(() => {
+    // NAVIGATE TO HOME
+    if (token) {
+      navigate(from, { replace: true });
+    }
+  }, [token, from, navigate]);
+  // USET TOKEN
   const notify = (message) => toast(message);
   useEffect(() => {
     if (error) {
