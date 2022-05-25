@@ -36,7 +36,10 @@ export const NavBar = () => {
                 {user ? (
                   <button
                     className="btn-full signout"
-                    onClick={() => signOut(auth)}
+                    onClick={() => {
+                      signOut(auth);
+                      localStorage.removeItem("accessToken");
+                    }}
                   >
                     SIGN OUT
                   </button>

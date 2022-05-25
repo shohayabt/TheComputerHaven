@@ -36,7 +36,7 @@ const SignUp = () => {
   const [sendEmailVerification, sending, verificationError] =
     useSendEmailVerification(auth);
   // USET TOKEN
-  const [token] = useToken(user, googleUser);
+  const [token] = useToken(user || googleUser);
   // NAVIGATE TO HOME
   if (token) {
     navigate(from, { replace: true });

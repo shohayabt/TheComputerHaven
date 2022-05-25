@@ -23,7 +23,7 @@ const Login = () => {
   // login-with-google-account
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
-  const [token] = useToken(user, googleUser);
+  const [token] = useToken(user || googleUser);
   useEffect(() => {
     // NAVIGATE TO HOME
     if (token) {
