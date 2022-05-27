@@ -1,0 +1,7 @@
+.form-control {
+  width: 80%;
+}
+.input-group > .input {
+  border-radius: 0px;
+  width: 100%;
+}
