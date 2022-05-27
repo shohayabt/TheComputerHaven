@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const Card = () => {
+const Card = (props) => {
+  const navigate = useNavigate();
+  const navigateToPurchase = (id) => {
+    navigate(`/car/${id}`);
+  };
+
   return (
     <div>
       <div className="card w-96 glass">
@@ -41,7 +47,14 @@ const Card = () => {
             </label>
           </span>
           <div className="card-actions justify-end">
-            <button className="btn-full">purchase now</button>
+            <button
+              className="btn-full signout"
+              onClick={() => {
+                navigateToPurchase();
+              }}
+            >
+              purchase now
+            </button>
           </div>
         </div>
       </div>

@@ -51,12 +51,36 @@ const AddProduct = () => {
         </div>
         <div>
           <label class="label">
-            <span class="label-text">Enter amount</span>
+            <span class="label-text">Enter Amount</span>
           </label>
           <label class="input-group">
             <input type="text" placeholder="10" class="input input-bordered" />
           </label>
         </div>
+        <div>
+          <label class="label">
+            <span class="label-text">Image Url</span>
+          </label>
+          <label class="input-group">
+            <input
+              type="text"
+              placeholder="Image Url"
+              class="input input-bordered"
+            />
+          </label>
+        </div>
+        <div>
+          <label class="label">
+            <span class="label-text">Product Details</span>
+          </label>
+          <label class="input-group">
+            <textarea
+              class="textarea textarea-bordered"
+              placeholder="Description"
+            ></textarea>
+          </label>
+        </div>
+
         <div className="button-area my-3 flex justify-center">
           <button className="btn-full">add product</button>
         </div>

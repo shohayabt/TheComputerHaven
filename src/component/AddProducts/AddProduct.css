@@ -5,3 +5,7 @@
   border-radius: 0px;
   width: 100%;
 }
+.input-group > .textarea {
+  border-radius: 0px;
+  width: 100%;
+}
