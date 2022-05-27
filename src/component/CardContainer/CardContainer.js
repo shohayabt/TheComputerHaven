@@ -4,9 +4,9 @@ import Card from "../Card/Card";
 const CardContainer = () => {
   const [products, setProducts] = useState([]);
 
-  const car = products.slice(0, 6);
+  const product = products.slice(0, 6);
   useEffect(() => {
-    fetch("https://sleepy-bayou-43362.herokuapp.com/car")
+    fetch("http://localhost:5000/product")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -15,8 +15,9 @@ const CardContainer = () => {
     <section className="px-10">
       <div className="title">PRODUCTS</div>
       <div className="card-contianer grid gap-4 grid-cols-3">
-        <Card />
-        <Card />
+        {product.map((product) => (
+          <Card key={product._id} product={product}></Card>
+        ))}
       </div>
     </section>
   );
