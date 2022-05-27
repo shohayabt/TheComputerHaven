@@ -12,7 +12,7 @@ const CardContainer = () => {
   }, []);
 
   return (
-    <section className="px-10">
+    <section className="px-10 pb-12">
       <div className="title">PRODUCTS</div>
       <div className="card-contianer grid gap-4 grid-cols-3">
         {product.map((product) => (
