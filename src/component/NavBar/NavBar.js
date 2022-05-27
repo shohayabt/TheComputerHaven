@@ -33,6 +33,11 @@ export const NavBar = () => {
                 <li>{user ? <></> : <Link to="/login">LOGIN</Link>}</li>
               </li>
               <li>
+                <li>
+                  {!user ? <></> : <Link to="/addProduct">ADD PRODUCT</Link>}
+                </li>
+              </li>
+              <li>
                 {user ? (
                   <button
                     className="btn-full signout"

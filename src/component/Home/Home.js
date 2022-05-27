@@ -8,7 +8,6 @@ const Home = () => {
     <div>
       <Hero></Hero>
       <CardContainer />
-      <AddProduct />
     </div>
   );
 };
