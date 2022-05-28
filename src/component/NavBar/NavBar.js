@@ -33,9 +33,7 @@ export const NavBar = () => {
               <li>
                 {!user ? <></> : <Link to="/addProduct">ADD PRODUCT</Link>}
               </li>
-              <li>
-                {!user ? <></> : <Link to="/addReview">ADD REVIEWS</Link>}
-              </li>
+              <li>{!user ? <></> : <Link to="/dashboard">DASHBOARD</Link>}</li>
               <li>
                 {user ? (
                   <button

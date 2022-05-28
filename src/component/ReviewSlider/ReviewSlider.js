@@ -23,7 +23,7 @@ const ReviewSlider = () => {
   }, []);
 
   return (
-    <section className="review-slider px-10">
+    <section className="review-slider px-10 pb-12">
       <div className="title">REVIEWS</div>
       <div className="review-container">
         <Slider {...settings}>
