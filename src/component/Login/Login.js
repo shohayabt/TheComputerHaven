@@ -23,6 +23,7 @@ const Login = () => {
   // login-with-google-account
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
+
   const [token] = useToken(user || googleUser);
   useEffect(() => {
     // NAVIGATE TO HOME
@@ -30,7 +31,6 @@ const Login = () => {
       navigate(from, { replace: true });
     }
   }, [token, from, navigate]);
-  // USET TOKEN
   const notify = (message) => toast(message);
   useEffect(() => {
     if (error) {

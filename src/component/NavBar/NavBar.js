@@ -29,13 +29,12 @@ export const NavBar = () => {
               <li>
                 <Link to="/home">HOME</Link>
               </li>
+              <li>{user ? <></> : <Link to="/login">LOGIN</Link>}</li>
               <li>
-                <li>{user ? <></> : <Link to="/login">LOGIN</Link>}</li>
+                {!user ? <></> : <Link to="/addProduct">ADD PRODUCT</Link>}
               </li>
               <li>
-                <li>
-                  {!user ? <></> : <Link to="/addProduct">ADD PRODUCT</Link>}
-                </li>
+                {!user ? <></> : <Link to="/addReview">ADD REVIEWS</Link>}
               </li>
               <li>
                 {user ? (

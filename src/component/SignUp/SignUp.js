@@ -33,9 +33,8 @@ const SignUp = () => {
     useCreateUserWithEmailAndPassword(auth);
 
   // SEND  EMAIL VERIFICATION
-  const [sendEmailVerification, sending, verificationError] =
-    useSendEmailVerification(auth);
-  // USET TOKEN
+  const [sendEmailVerification, sending] = useSendEmailVerification(auth);
+  // USE TOKEN
   const [token] = useToken(user || googleUser);
   // NAVIGATE TO HOME
   if (token) {

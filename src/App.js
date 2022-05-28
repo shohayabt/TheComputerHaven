@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import "./App.css";
 import NotFound from "./component/404page/NotFound";
 import AddProduct from "./component/AddProducts/AddProduct";
+import AddReview from "./component/AddReview/AddReview";
 import Home from "./component/Home/Home";
 import Login from "./component/Login/Login";
 import { NavBar } from "./component/NavBar/NavBar";
@@ -25,6 +26,14 @@ function App() {
           element={
             <PrivateAuth>
               <Purchase />
+            </PrivateAuth>
+          }
+        ></Route>
+        <Route
+          path="/addReview"
+          element={
+            <PrivateAuth>
+              <AddReview />
             </PrivateAuth>
           }
         ></Route>
