@@ -14,6 +14,7 @@ import { NavBar } from "./component/NavBar/NavBar";
 import PrivateAuth from "./component/PrivateAuth/PrivateAuth";
 import Purchase from "./component/Purchase/Purchase";
 import SignUp from "./component/SignUp/SignUp";
+import Users from "./component/Users/Users";
 function App() {
   return (
     <>
@@ -53,6 +54,7 @@ function App() {
             path="/dashboard/myProfile"
             element={<MyProfile></MyProfile>}
           ></Route>
+          <Route path="/dashboard/users" element={<Users></Users>}></Route>
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
