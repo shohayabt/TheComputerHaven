@@ -5,6 +5,7 @@ import "./App.css";
 import NotFound from "./component/404page/NotFound";
 import AddProduct from "./component/AddProducts/AddProduct";
 import AddReview from "./component/AddReview/AddReview";
+import Blog from "./component/Blog/Blog";
 import Dashboard from "./component/Dashboard/Dashboard";
 import Footer from "./component/Footer/Footer";
 import Home from "./component/Home/Home";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/login" element={<Login></Login>} />
+        <Route path="/blog" element={<Blog></Blog>} />
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route
           path="/product/:id"
