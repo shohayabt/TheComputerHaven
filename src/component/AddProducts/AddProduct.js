@@ -2,6 +2,7 @@ import React from "react";
 import "./AddProduct.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase";
+import swal from "sweetalert";
 
 const AddProduct = () => {
   const [user] = useAuthState(auth);
@@ -38,7 +39,11 @@ const AddProduct = () => {
             },
           })
             .then((response) => response.json())
-            .then((data) => alert(data));
+            .then((data) => {
+              if (data?.acknowledged === true) {
+                swal("PRODUCT ADDED", "PRODUCT ADDED  TO DATABASE", "success");
+              }
+            });
           e.target.reset();
         }}
       >
@@ -50,7 +55,10 @@ const AddProduct = () => {
             <input
               type="text"
               name="email"
-              placeholder="info@site.com"
+              value={user.email}
+              readOnly
+              required
+              disabled
               className="input input-bordered"
             />
           </label>
@@ -75,6 +83,7 @@ const AddProduct = () => {
           <label className="input-group">
             <input
               type="text"
+              required
               name="name"
               placeholder="Product Name"
               className="input input-bordered"
@@ -89,6 +98,7 @@ const AddProduct = () => {
             <input
               type="text"
               name="quantity"
+              required
               placeholder="10"
               className="input input-bordered"
             />
@@ -103,6 +113,7 @@ const AddProduct = () => {
               type="text"
               name="min"
               placeholder="10"
+              required
               className="input input-bordered"
             />
           </label>
@@ -116,6 +127,7 @@ const AddProduct = () => {
               type="text"
               name="ava"
               placeholder="10"
+              required
               className="input input-bordered"
             />
           </label>
@@ -129,6 +141,7 @@ const AddProduct = () => {
               type="text"
               name="price"
               placeholder="10"
+              required
               className="input input-bordered"
             />
           </label>
@@ -154,6 +167,7 @@ const AddProduct = () => {
             <textarea
               className="textarea textarea-bordered"
               placeholder="Description"
+              required
               name="description"
             ></textarea>
           </label>

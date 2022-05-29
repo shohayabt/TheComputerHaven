@@ -31,7 +31,7 @@ const Card = (props) => {
               </label>
             </span>
           </span>
-          <p className="p">{description.slice(0, 80)} . . . . .</p>
+          <p className="p">{description.slice(0, 70)}...</p>
           <span className="text-red-600 w-50 price">
             <label className="input-group">
               <span>Quantity</span>
