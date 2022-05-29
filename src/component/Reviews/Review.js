@@ -11,7 +11,7 @@ const Review = (props) => {
       <div className="card-body review-body">
         <h2 className="card-title">{name}</h2>
         <p>{description}</p>
-        <div className="rating rating-md">
+        {/* <div className="rating rating-md">
           <input
             type="radio"
             name="rating-7"
@@ -38,7 +38,7 @@ const Review = (props) => {
             name="rating-7"
             className="mask mask-star-2 bg-orange-400"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

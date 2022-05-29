@@ -10,12 +10,12 @@ const Dashboard = () => {
   return (
     <section className="dashboard px-10 py-12">
       <div className="dashboard">
-        <div class="drawer drawer-mobile">
-          <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-          <div class="drawer-content">
+        <div className="drawer drawer-mobile">
+          <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+          <div className="drawer-content">
             <label
               for="my-drawer-2"
-              class="btn-full signout  drawer-button lg:hidden"
+              className="btn-full signout  drawer-button lg:hidden"
             >
               Open drawer
             </label>
@@ -24,19 +24,25 @@ const Dashboard = () => {
             </div>
             <Outlet />
           </div>
-          <div class="drawer-side">
-            <label for="my-drawer-2" class="drawer-overlay"></label>
-            <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
-              {/* <!-- Sidebar content here --> */}
+          <div className="drawer-side">
+            <label for="my-drawer-2" className="drawer-overlay"></label>
+            <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
               <li>
                 <Link to="/dashboard/myProfile">MY PROFILE</Link>
               </li>
-              <li>
-                <Link to="/dashboard">ADD REVIEW</Link>
-              </li>
+              {!admin && (
+                <li>
+                  <Link to="/dashboard">ADD REVIEW</Link>
+                </li>
+              )}
               {admin && (
                 <li>
                   <Link to="/dashboard/users">ALL USERS</Link>
+                </li>
+              )}
+              {admin && (
+                <li>
+                  <Link to="/dashboard/addProduct">ADD PRODUCT</Link>
                 </li>
               )}
             </ul>

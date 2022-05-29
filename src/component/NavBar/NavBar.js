@@ -30,9 +30,6 @@ export const NavBar = () => {
                 <Link to="/home">HOME</Link>
               </li>
               <li>{user ? <></> : <Link to="/login">LOGIN</Link>}</li>
-              <li>
-                {!user ? <></> : <Link to="/addProduct">ADD PRODUCT</Link>}
-              </li>
               <li>{!user ? <></> : <Link to="/dashboard">DASHBOARD</Link>}</li>
               <li>
                 {user ? (

@@ -63,6 +63,14 @@ function App() {
               </NeedAdmin>
             }
           ></Route>
+          <Route
+            path="/dashboard/addProduct"
+            element={
+              <NeedAdmin>
+                <AddProduct />
+              </NeedAdmin>
+            }
+          ></Route>
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

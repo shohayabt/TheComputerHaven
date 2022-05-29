@@ -19,14 +19,14 @@ const Card = (props) => {
           <h2 className="card-title">{name}</h2>
           <span className="price">
             <span className="text-red-600">
-              <label class="input-group">
+              <label className="input-group">
                 <span>Price</span>
                 <input
                   type="text"
                   disabled
                   readOnly
                   value={price}
-                  class="input-md input-bordered w-30"
+                  className="input-md input-bordered w-30"
                 />
               </label>
             </span>
@@ -38,14 +38,14 @@ const Card = (props) => {
             Amet, cum nostrum.
           </p>
           <span className="text-red-600 w-50 price">
-            <label class="input-group">
+            <label className="input-group">
               <span>Quantity</span>
               <input
                 type="text"
                 disabled
                 readOnly
                 value={quantity}
-                class="input-md input-bordered w-30"
+                className="input-md input-bordered w-30"
               />
             </label>
           </span>

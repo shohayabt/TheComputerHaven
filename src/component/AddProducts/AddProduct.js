@@ -8,7 +8,7 @@ const AddProduct = () => {
   return (
     <section className="flex justify-center px-10 py-10">
       <form
-        class="form-control w-100"
+        className="form-control w-100"
         onSubmit={(e) => {
           e.preventDefault();
           const email = user.email;
@@ -41,90 +41,90 @@ const AddProduct = () => {
         }}
       >
         <div>
-          <label class="label">
-            <span class="label-text">Your Email</span>
+          <label className="label">
+            <span className="label-text">Your Email</span>
           </label>
-          <label class="input-group">
+          <label className="input-group">
             <input
               type="text"
               name="email"
               placeholder="info@site.com"
-              class="input input-bordered"
+              className="input input-bordered"
             />
           </label>
         </div>
         <div>
-          <label class="label">
-            <span class="label-text">Your Name</span>
+          <label className="label">
+            <span className="label-text">Your Name</span>
           </label>
-          <label class="input-group">
+          <label className="input-group">
             <input
               type="text"
               name="suplierName"
               placeholder="Your Name"
-              class="input input-bordered"
+              className="input input-bordered"
             />
           </label>
         </div>
         <div>
-          <label class="label">
-            <span class="label-text">Product Name</span>
+          <label className="label">
+            <span className="label-text">Product Name</span>
           </label>
-          <label class="input-group">
+          <label className="input-group">
             <input
               type="text"
               name="name"
               placeholder="Product Name"
-              class="input input-bordered"
+              className="input input-bordered"
             />
           </label>
         </div>
         <div>
-          <label class="label">
-            <span class="label-text">Quantity</span>
+          <label className="label">
+            <span className="label-text">Quantity</span>
           </label>
-          <label class="input-group">
+          <label className="input-group">
             <input
               type="text"
               name="quantity"
               placeholder="10"
-              class="input input-bordered"
+              className="input input-bordered"
             />
           </label>
         </div>
         <div>
-          <label class="label">
-            <span class="label-text">Enter Amount</span>
+          <label className="label">
+            <span className="label-text">Enter Amount</span>
           </label>
-          <label class="input-group">
+          <label className="input-group">
             <input
               type="text"
               name="price"
               placeholder="10"
-              class="input input-bordered"
+              className="input input-bordered"
             />
           </label>
         </div>
         <div>
-          <label class="label">
-            <span class="label-text">Image Url</span>
+          <label className="label">
+            <span className="label-text">Image Url</span>
           </label>
-          <label class="input-group">
+          <label className="input-group">
             <input
               type="text"
               name="imageUrl"
               placeholder="Image Url"
-              class="input input-bordered"
+              className="input input-bordered"
             />
           </label>
         </div>
         <div>
-          <label class="label">
-            <span class="label-text">Product Details</span>
+          <label className="label">
+            <span className="label-text">Product Details</span>
           </label>
-          <label class="input-group">
+          <label className="input-group">
             <textarea
-              class="textarea textarea-bordered"
+              className="textarea textarea-bordered"
               placeholder="Description"
               name="description"
             ></textarea>

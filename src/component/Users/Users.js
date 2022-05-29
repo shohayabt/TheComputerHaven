@@ -9,8 +9,8 @@ const Users = () => {
       .then((data) => setUsers(data));
   }, [users]);
   return (
-    <div class="overflow-x-auto">
-      <table class="table w-full">
+    <div className="overflow-x-auto">
+      <table className="table w-full">
         <thead>
           <tr className="text-center">
             <th>NAME</th>
