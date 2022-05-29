@@ -7,6 +7,14 @@ const TableData = (props) => {
   const { name, email, address, number, _id } = props.users;
   const [user] = useAuthState(auth);
   const [admin] = useAdmin(user);
+  const removeUser = (id) => {
+    const confirm = window.confirm("ARE YOU SURE?", id);
+    if (confirm) {
+      fetch(`http://localhost:5000/removeUser/${id}`, {
+        method: "DELETE",
+      });
+    }
+  };
   const makeAdmin = (id) => {
     const url = `http://localhost:5000/makeAdmin/${id}`;
     fetch(url, {
@@ -33,6 +41,11 @@ const TableData = (props) => {
           </button>
         </td>
       )}
+      <td>
+        <button className="btn-full signout" onClick={() => removeUser(_id)}>
+          REMOVE USER
+        </button>
+      </td>
     </tr>
   );
 };

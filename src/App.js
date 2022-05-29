@@ -10,6 +10,7 @@ import Dashboard from "./component/Dashboard/Dashboard";
 import Footer from "./component/Footer/Footer";
 import Home from "./component/Home/Home";
 import Login from "./component/Login/Login";
+import MyOrder from "./component/MyOrder/MyOrder";
 import MyProfile from "./component/MyProfile/MyProfile";
 import { NavBar } from "./component/NavBar/NavBar";
 import NeedAdmin from "./component/NeedAdmin/NeedAdmin";
@@ -73,6 +74,7 @@ function App() {
               </NeedAdmin>
             }
           ></Route>
+          <Route path="/dashboard/myOrder" element={<MyOrder />}></Route>
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
