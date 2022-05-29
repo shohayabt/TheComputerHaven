@@ -15,6 +15,7 @@ import MyProfile from "./component/MyProfile/MyProfile";
 import { NavBar } from "./component/NavBar/NavBar";
 import NeedAdmin from "./component/NeedAdmin/NeedAdmin";
 import PrivateAuth from "./component/PrivateAuth/PrivateAuth";
+import Portfolio from "./component/Protfolio/Portfolio";
 import Purchase from "./component/Purchase/Purchase";
 import SignUp from "./component/SignUp/SignUp";
 import Users from "./component/Users/Users";
@@ -28,6 +29,7 @@ function App() {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/login" element={<Login></Login>} />
         <Route path="/blog" element={<Blog></Blog>} />
+        <Route path="/myPortfolio" element={<Portfolio></Portfolio>} />
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route
           path="/product/:id"

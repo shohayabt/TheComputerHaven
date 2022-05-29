@@ -32,6 +32,9 @@ export const NavBar = () => {
               <li>
                 <Link to="/blog">BLOG</Link>
               </li>
+              <li>
+                <Link to="/myPortfolio">PORTFOLIO</Link>
+              </li>
               <li>{user ? <></> : <Link to="/login">LOGIN</Link>}</li>
               <li>{!user ? <></> : <Link to="/dashboard">DASHBOARD</Link>}</li>
               <li>
