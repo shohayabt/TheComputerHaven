@@ -11,6 +11,7 @@ import Home from "./component/Home/Home";
 import Login from "./component/Login/Login";
 import MyProfile from "./component/MyProfile/MyProfile";
 import { NavBar } from "./component/NavBar/NavBar";
+import NeedAdmin from "./component/NeedAdmin/NeedAdmin";
 import PrivateAuth from "./component/PrivateAuth/PrivateAuth";
 import Purchase from "./component/Purchase/Purchase";
 import SignUp from "./component/SignUp/SignUp";
@@ -54,7 +55,14 @@ function App() {
             path="/dashboard/myProfile"
             element={<MyProfile></MyProfile>}
           ></Route>
-          <Route path="/dashboard/users" element={<Users></Users>}></Route>
+          <Route
+            path="/dashboard/users"
+            element={
+              <NeedAdmin>
+                <Users></Users>
+              </NeedAdmin>
+            }
+          ></Route>
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
