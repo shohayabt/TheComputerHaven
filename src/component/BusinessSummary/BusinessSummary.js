@@ -11,7 +11,7 @@ import "./BusinessSummary.css";
 const BusinessSummary = () => {
   return (
     <section className="business-summary px-10 py-0">
-      <div className="summary grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="summary grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-1 sm:gap-2 md:gap-4">
         <div className="summary-card p-10">
           <p>
             <FaCoffee />

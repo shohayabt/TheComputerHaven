@@ -18,10 +18,7 @@ const Hero = () => {
             Bangladesh Technology has become a part of our daily lives and for a
             huge portion of our life, we are dependent on tech products daily.
             There is hardly a home in Bangladesh without a tech product. This is
-            where we come in. Katie and Engineering Ltd had started as a Tech
-            product shop way back in March 2007. We focused on giving the
-            customers the best service possible. This is why Kaite is one of The
-            most trusted names in the tech industry of Bangladesh today.
+            where we come in.
           </p>
         </p>
         <button className="btn-custom ">Explore More</button>

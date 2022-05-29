@@ -32,13 +32,6 @@
   flex-direction: column;
   width: 70%;
 }
-.subscribe-text > h1 {
-  font-size: 45px;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: white;
-  letter-spacing: 2px;
-}
 .subscribe-text > h1 > span {
   color: var(--orange);
   font-size: 55px;
@@ -55,13 +48,3 @@
   margin-left: 10px;
   font-size: 20px;
 }
-/* .input-area {
-  width: 60%;
-  margin-top: 10px;
-}
-.input-area > input {
-  width: 100%;
-  padding: 14px 7px;
-  outline: 0px;
-  border-radius: 5px;
-} */
