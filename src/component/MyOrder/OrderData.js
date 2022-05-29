@@ -9,7 +9,7 @@ const OrderData = (props) => {
   const removeOrder = (id) => {
     const confirm = window.confirm("ARE YOU SURE?", id);
     if (confirm) {
-      fetch(`http://localhost:5000/removeOrder/${id}`, {
+      fetch(`https://polar-taiga-99861.herokuapp.com/removeOrder/${id}`, {
         method: "DELETE",
       });
     }

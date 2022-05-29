@@ -22,7 +22,7 @@ const PurchasePage = () => {
   const [tool, setTool] = useState([]);
   const productName = tool?.name;
   useEffect(() => {
-    fetch(`http://localhost:5000/tool/${id}`)
+    fetch(`https://polar-taiga-99861.herokuapp.com/tool/${id}`)
       .then((res) => res.json())
       .then((data) => setTool(data));
   }, [id]);
@@ -58,7 +58,7 @@ const PurchasePage = () => {
       address: address,
       phone: phone,
     };
-    fetch("http://localhost:5000/order", {
+    fetch("https://polar-taiga-99861.herokuapp.com/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -4,7 +4,7 @@ import OrderData from "./OrderData";
 const MyOrder = () => {
   const [myOrder, setMyOrder] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/myOrder")
+    fetch("https://polar-taiga-99861.herokuapp.com/myOrder")
       .then((res) => res.json())
       .then((data) => setMyOrder(data));
   }, [myOrder]);

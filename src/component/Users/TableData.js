@@ -10,13 +10,13 @@ const TableData = (props) => {
   const removeUser = (id) => {
     const confirm = window.confirm("ARE YOU SURE?", id);
     if (confirm) {
-      fetch(`http://localhost:5000/removeUser/${id}`, {
+      fetch(`https://polar-taiga-99861.herokuapp.com/removeUser/${id}`, {
         method: "DELETE",
       });
     }
   };
   const makeAdmin = (id) => {
-    const url = `http://localhost:5000/makeAdmin/${id}`;
+    const url = `https://polar-taiga-99861.herokuapp.com/makeAdmin/${id}`;
     fetch(url, {
       method: "PUT",
       body: JSON.stringify({ id }),

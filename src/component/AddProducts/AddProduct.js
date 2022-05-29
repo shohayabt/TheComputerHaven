@@ -29,7 +29,7 @@ const AddProduct = () => {
             minOrderQuantity,
             available,
           };
-          const url = `http://localhost:5000/products`;
+          const url = `https://polar-taiga-99861.herokuapp.com/products`;
           fetch(url, {
             method: "POST",
             body: JSON.stringify(product),

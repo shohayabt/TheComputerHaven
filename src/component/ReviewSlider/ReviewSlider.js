@@ -17,7 +17,7 @@ const ReviewSlider = () => {
 
   const review = reviews.slice(0, 6);
   useEffect(() => {
-    fetch("http://localhost:5000/review")
+    fetch("https://polar-taiga-99861.herokuapp.com/review")
       .then((res) => res.json())
       .then((data) => setreviews(data));
   }, []);

@@ -15,7 +15,7 @@ const AddReview = () => {
             imageUrl,
             description,
           };
-          const url = `http://localhost:5000/reviews`;
+          const url = `https://polar-taiga-99861.herokuapp.com/reviews`;
           fetch(url, {
             method: "POST",
             body: JSON.stringify(review),
