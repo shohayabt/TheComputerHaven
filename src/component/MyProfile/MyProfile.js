@@ -25,7 +25,7 @@ const MyProfile = () => {
             profile,
             education,
           };
-          const url = `http://localhost:5000/updateUser/${email}`;
+          const url = `https://polar-taiga-99861.herokuapp.com/updateUser/${email}`;
           fetch(url, {
             method: "PUT",
             body: JSON.stringify(updateUser),
