@@ -8,6 +8,7 @@ const TableData = (props) => {
       method: "PUT",
       body: JSON.stringify({ id }),
       headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         "Content-type": "application/json; charset=UTF-8",
       },
     })

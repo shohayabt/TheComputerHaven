@@ -35,6 +35,8 @@ const SignUp = () => {
   // SEND  EMAIL VERIFICATION
   const [sendEmailVerification, sending] = useSendEmailVerification(auth);
   // USE TOKEN
+  console.log(user);
+  console.log(googleUser);
   const [token] = useToken(user || googleUser);
   // NAVIGATE TO HOME
   if (token) {

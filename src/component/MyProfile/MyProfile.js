@@ -11,7 +11,7 @@ const MyProfile = () => {
         onSubmit={(e) => {
           e.preventDefault();
           const email = user?.email;
-          const name = user?.displayName || user?.email;
+          const name = e.target.name.value;
           const number = e.target.number.value;
           const address = e.target.address.value;
           const updateUser = {
@@ -56,10 +56,9 @@ const MyProfile = () => {
           <label class="input-group">
             <input
               type="text"
-              name="suplierName"
-              value={user.displayName}
-              readOnly
-              disabled
+              name="name"
+              required
+              placeholder="Your Name"
               class="input input-bordered"
             />
           </label>

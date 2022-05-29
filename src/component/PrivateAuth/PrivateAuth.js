@@ -8,7 +8,7 @@ const PrivateAuth = ({ children }) => {
   const [user, loading] = useAuthState(auth);
   const location = useLocation();
   if (loading) {
-    <Loading></Loading>;
+    return <Loading></Loading>;
   }
 
   if (!user) {

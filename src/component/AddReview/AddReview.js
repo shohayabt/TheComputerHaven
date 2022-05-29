@@ -4,7 +4,7 @@ const AddReview = () => {
   return (
     <section className="flex justify-center px-10 py-10">
       <form
-        class="form-control w-100"
+        className="form-control w-100"
         onSubmit={(e) => {
           e.preventDefault();
           const name = e.target.name.value;
@@ -29,43 +29,55 @@ const AddReview = () => {
         }}
       >
         <div>
-          <label class="label">
-            <span class="label-text">Your Name</span>
+          <label className="label">
+            <span className="label-text">Your Name</span>
           </label>
-          <label class="input-group">
+          <label className="input-group">
             <input
               type="text"
               name="name"
               placeholder="Your Name"
-              class="input input-bordered"
+              className="input input-bordered"
             />
           </label>
         </div>
         <div>
-          <label class="label">
-            <span class="label-text">Profile Pictures</span>
+          <label className="label">
+            <span className="label-text">Profile Pictures</span>
           </label>
-          <label class="input-group">
+          <label className="input-group">
             <input
               type="text"
               name="imageUrl"
               placeholder="Image Url"
-              class="input input-bordered"
+              className="input input-bordered"
             />
           </label>
         </div>
         <div>
-          <label class="label">
-            <span class="label-text">Your Comments</span>
+          <label className="label">
+            <span className="label-text">Your Comments</span>
           </label>
-          <label class="input-group">
+          <label className="input-group">
             <textarea
-              class="textarea textarea-bordered"
+              className="textarea textarea-bordered"
               placeholder="Description"
               name="description"
             ></textarea>
           </label>
         </div>
+        <label className="label">
+          <span className="label-text">Ratings</span>
+        </label>
+        <select className="select select-bordered  max-w-xs">
+          <option disabled selected>
+            5
+          </option>
+          <option>4</option>
+          <option>3</option>
+          <option>2</option>
+          <option>1</option>
+        </select>
 
         <div className="button-area my-3 flex justify-center">
           <button className="btn-full">SUBMIT</button>
