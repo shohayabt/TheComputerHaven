@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Card.css";
 
 const Card = (props) => {
-  const { description, _id, price, quantity, name, imageUrl } = props.product;
+  const { description, _id, price, available, name, imageUrl } = props.product;
   const navigate = useNavigate();
   const navigateToPurchase = (id) => {
     navigate(`/product/${id}`);
@@ -31,12 +31,7 @@ const Card = (props) => {
               </label>
             </span>
           </span>
-          <p className="p">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
-            facere id sapiente quisquam sequi amet consequatur debitis unde
-            corporis, impedit animi magnam in ipsum deserunt, officiis aut.
-            Amet, cum nostrum.
-          </p>
+          <p className="p">{description}</p>
           <span className="text-red-600 w-50 price">
             <label className="input-group">
               <span>Quantity</span>
@@ -44,7 +39,7 @@ const Card = (props) => {
                 type="text"
                 disabled
                 readOnly
-                value={quantity}
+                value={available}
                 className="input-md input-bordered w-30"
               />
             </label>

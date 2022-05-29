@@ -14,7 +14,8 @@ const AddProduct = () => {
           const email = user.email;
           const name = e.target.name.value;
           const price = e.target.price.value;
-          const quantity = e.target.quantity.value;
+          const minOrderQuantity = e.target.min.value;
+          const available = e.target.ava.value;
           const suplierName = user.displayName || user.email;
           const imageUrl = e.target.imageUrl.value;
           const description = e.target.description.value;
@@ -22,10 +23,11 @@ const AddProduct = () => {
             email,
             name,
             price,
-            quantity,
             suplierName,
             imageUrl,
             description,
+            minOrderQuantity,
+            available,
           };
           const url = `http://localhost:5000/products`;
           fetch(url, {
@@ -87,6 +89,32 @@ const AddProduct = () => {
             <input
               type="text"
               name="quantity"
+              placeholder="10"
+              className="input input-bordered"
+            />
+          </label>
+        </div>
+        <div>
+          <label className="label">
+            <span className="label-text">Minimum</span>
+          </label>
+          <label className="input-group">
+            <input
+              type="text"
+              name="min"
+              placeholder="10"
+              className="input input-bordered"
+            />
+          </label>
+        </div>
+        <div>
+          <label className="label">
+            <span className="label-text">Available</span>
+          </label>
+          <label className="input-group">
+            <input
+              type="text"
+              name="ava"
               placeholder="10"
               className="input input-bordered"
             />
