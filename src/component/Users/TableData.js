@@ -34,7 +34,7 @@ const TableData = (props) => {
       <td>{email}</td>
       <td>{number}</td>
       <td className="uppercase">{address}</td>
-      {!admin && (
+      {admin && (
         <td>
           <button className="btn-full signout" onClick={() => makeAdmin(_id)}>
             MAKE ADMIN

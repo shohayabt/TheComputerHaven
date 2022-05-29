@@ -10,43 +10,43 @@ const Portfolio = () => {
         <div className="web-skills">
           <h1>HTML</h1>
           <progress
-            class="progress progress-accent w-full"
+            className="progress progress-accent w-full"
             value="80"
             max="100"
           ></progress>
           <h1>CSS</h1>
           <progress
-            class="progress progress-accent w-full"
+            className="progress progress-accent w-full"
             value="10"
             max="100"
           ></progress>
           <h1>JS</h1>
           <progress
-            class="progress progress-accent w-full"
+            className="progress progress-accent w-full"
             value="40"
             max="100"
           ></progress>
           <h1>REACT</h1>
           <progress
-            class="progress progress-accent w-full"
+            className="progress progress-accent w-full"
             value="70"
             max="100"
           ></progress>
           <h1>FIREBASE</h1>
           <progress
-            class="progress progress-accent w-full"
+            className="progress progress-accent w-full"
             value="100"
             max="100"
           ></progress>
           <h1>NODE JS</h1>
           <progress
-            class="progress progress-accent w-full"
+            className="progress progress-accent w-full"
             value="100"
             max="100"
           ></progress>
           <h1>PHP</h1>
           <progress
-            class="progress progress-accent w-full"
+            className="progress progress-accent w-full"
             value="100"
             max="100"
           ></progress>
