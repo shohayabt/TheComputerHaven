@@ -15,7 +15,7 @@ const Card = (props) => {
         <figure>
           <img src={imageUrl} alt="car!" />
         </figure>
-        <div className="card-body px-10">
+        <div className="card-body px-5">
           <h2 className="card-title">{name}</h2>
           <span className="price">
             <span className="text-red-600">
@@ -31,7 +31,7 @@ const Card = (props) => {
               </label>
             </span>
           </span>
-          <p className="p">{description}</p>
+          <p className="p">{description.slice(0, 80)} . . . . .</p>
           <span className="text-red-600 w-50 price">
             <label className="input-group">
               <span>Quantity</span>
