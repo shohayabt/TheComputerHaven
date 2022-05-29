@@ -1,5 +1,6 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import swal from "sweetalert";
 import auth from "../../firebase";
 
 const MyProfile = () => {
@@ -14,11 +15,15 @@ const MyProfile = () => {
           const name = e.target.name.value;
           const number = e.target.number.value;
           const address = e.target.address.value;
+          const education = e.target.edu.value;
+          const profile = e.target.profile.value;
           const updateUser = {
             email,
             name,
             number,
             address,
+            profile,
+            education,
           };
           const url = `http://localhost:5000/updateUser/${email}`;
           fetch(url, {
@@ -29,7 +34,16 @@ const MyProfile = () => {
             },
           })
             .then((response) => response.json())
-            .then((data) => console.log(data));
+            .then((data) => {
+              console.log(data);
+              if (data?.acknowledged === true || data?.modifiedCount === 1) {
+                swal(
+                  "PROFILE  UPDATED",
+                  "PROFILE UPDTAE TO DATABASE",
+                  "success"
+                );
+              }
+            });
           e.target.reset();
         }}
       >
@@ -65,6 +79,34 @@ const MyProfile = () => {
         </div>
         <div>
           <label className="label">
+            <span className="label-text">Profile Link</span>
+          </label>
+          <label className="input-group">
+            <input
+              type="text"
+              name="profile"
+              required
+              placeholder="Linkedin"
+              className="input input-bordered"
+            />
+          </label>
+        </div>
+        <div>
+          <label className="label">
+            <span className="label-text">Education</span>
+          </label>
+          <label className="input-group">
+            <input
+              type="text"
+              name="edu"
+              required
+              placeholder="Education"
+              className="input input-bordered"
+            />
+          </label>
+        </div>
+        <div>
+          <label className="label">
             <span className="label-text">Address</span>
           </label>
           <label className="input-group">
@@ -72,6 +114,7 @@ const MyProfile = () => {
               className="textarea textarea-bordered"
               placeholder="Address"
               name="address"
+              required
             ></textarea>
           </label>
         </div>
