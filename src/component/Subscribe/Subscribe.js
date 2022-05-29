@@ -9,15 +9,16 @@ const Subscribe = () => {
           <h1>
             Subscribe to our newsleter <span>!</span>
           </h1>
-          {/* <p>
-            we will sent you the bes of our blog just once a month.
-            <span>we promise!</span>
-          </p> */}
-          <div className="input-area">
-            <input type="email" required placeholder="Email address" />
+          <div className="input-area w-96">
+            <input
+              className="input input-bordered w-full"
+              type="email"
+              required
+              placeholder="Email address"
+            />
           </div>
           <div className="button-area">
-            <button type="submit" className="btn-custom mt-2">
+            <button type="submit" className="btn-full signout mt-2">
               Subscribe
             </button>
           </div>
