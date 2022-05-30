@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase";
 import OrderData from "./OrderData";
 
 const MyOrder = () => {
-  const [myOrder, setMyOrder] = useState([]);
+  const [order, setMyOrder] = useState([]);
+  const [user] = useAuthState(auth);
+  const email = user.email;
   useEffect(() => {
-    fetch("https://polar-taiga-99861.herokuapp.com/myOrder")
+    fetch(`http://localhost:5000/myorder/${email}`)
       .then((res) => res.json())
       .then((data) => setMyOrder(data));
-  }, [myOrder]);
+  }, [order]);
   return (
     <div className="overflow-x-auto">
       <table className="table w-full">
@@ -23,7 +27,7 @@ const MyOrder = () => {
           </tr>
         </thead>
         <tbody>
-          {myOrder.map((myOrder) => (
+          {order.map((myOrder) => (
             <OrderData key={myOrder._id} myOrder={myOrder}></OrderData>
           ))}
         </tbody>

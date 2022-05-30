@@ -7,12 +7,12 @@ const AddReview = () => {
         className="form-control w-100"
         onSubmit={(e) => {
           e.preventDefault();
+          const rating = e.target.rating8.value;
           const name = e.target.name.value;
-          const imageUrl = e.target.imageUrl.value;
           const description = e.target.description.value;
           const review = {
             name,
-            imageUrl,
+            rating,
             description,
           };
           const url = `https://polar-taiga-99861.herokuapp.com/reviews`;
@@ -38,21 +38,37 @@ const AddReview = () => {
               name="name"
               placeholder="Your Name"
               className="input input-bordered"
+              required
             />
           </label>
         </div>
-        <div>
-          <label className="label">
-            <span className="label-text">Profile Pictures</span>
-          </label>
-          <label className="input-group">
-            <input
-              type="text"
-              name="imageUrl"
-              placeholder="Image Url"
-              className="input input-bordered"
-            />
-          </label>
+        <div class="rating rating-lg my-5">
+          <input
+            type="radio"
+            name="rating8"
+            class="mask mask-star-2 bg-orange-400"
+          />
+          <input
+            type="radio"
+            name="rating8"
+            class="mask mask-star-2 bg-orange-400"
+            checked
+          />
+          <input
+            type="radio"
+            name="rating8"
+            class="mask mask-star-2 bg-orange-400"
+          />
+          <input
+            type="radio"
+            name="rating8"
+            class="mask mask-star-2 bg-orange-400"
+          />
+          <input
+            type="radio"
+            name="rating8"
+            class="mask mask-star-2 bg-orange-400"
+          />
         </div>
         <div>
           <label className="label">
@@ -63,22 +79,10 @@ const AddReview = () => {
               className="textarea textarea-bordered"
               placeholder="Description"
               name="description"
+              required
             ></textarea>
           </label>
         </div>
-        <label className="label">
-          <span className="label-text">Ratings</span>
-        </label>
-        <select className="select select-bordered  max-w-xs">
-          <option disabled selected>
-            5
-          </option>
-          <option>4</option>
-          <option>3</option>
-          <option>2</option>
-          <option>1</option>
-        </select>
-
         <div className="button-area my-3 flex justify-center">
           <button className="btn-full">SUBMIT</button>
         </div>
