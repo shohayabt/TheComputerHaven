@@ -1,6 +1,5 @@
 import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
 import "./App.css";
 import NotFound from "./component/404page/NotFound";
 import AddProduct from "./component/AddProducts/AddProduct";
@@ -19,6 +18,7 @@ import Portfolio from "./component/Protfolio/Portfolio";
 import Purchase from "./component/Purchase/Purchase";
 import SignUp from "./component/SignUp/SignUp";
 import Users from "./component/Users/Users";
+import ManageProduct from "./ManageAllProduct/ManageProduct";
 function App() {
   return (
     <>
@@ -73,6 +73,14 @@ function App() {
             element={
               <NeedAdmin>
                 <AddProduct />
+              </NeedAdmin>
+            }
+          ></Route>
+          <Route
+            path="/dashboard/manageProduct"
+            element={
+              <NeedAdmin>
+                <ManageProduct />
               </NeedAdmin>
             }
           ></Route>
