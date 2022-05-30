@@ -44,16 +44,16 @@ const Blog = () => {
         </div>
         <div className="my-5">
           <h1 className="text-2xl font-bold">
-            What are the different ways to manage a state in a React
-            application?
+            What is a unit test? Why should write unit tests?
           </h1>
           <p>
-            A state is just a javascript object which holds information of the
-            component which can affect the output of the render function. You
-            can manage the state within the component, and whenever you change
-            the state, React re-renders the component. There are two ways you
-            can change the state: one is using this.state and another one is
-            this.setState.
+            Unit testing is one of the software testing types that includes
+            initial testing phase. With unit testing small modules of the
+            program are tested individually. Unit testing is one of the software
+            testing types that includes initial testing phase. The main reason
+            to write unit tests is to gain confidence. Unit tests allow us to
+            make changes, with confidence that they will work. Unit tests allow
+            change.
           </p>
         </div>
         <div className="my-5">
