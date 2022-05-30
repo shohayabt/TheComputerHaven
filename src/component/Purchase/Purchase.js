@@ -28,7 +28,9 @@ const PurchasePage = () => {
   }, [id]);
 
   const handleQuantity = (event) => {
-    const quantity = event.target.value;
+    let quantity = event.target.value;
+    quantity = parseInt(quantity);
+
     if (quantity >= tool?.minOrderQuantity && quantity <= tool?.available) {
       setTrue(true);
       setNewQuantity(quantity);
