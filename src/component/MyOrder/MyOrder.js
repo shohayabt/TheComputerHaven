@@ -8,7 +8,7 @@ const MyOrder = () => {
   const [user] = useAuthState(auth);
   const email = user.email;
   useEffect(() => {
-    fetch(`http://localhost:5000/myorder/${email}`)
+    fetch(`https://polar-taiga-99861.herokuapp.com/myorder/${email}`)
       .then((res) => res.json())
       .then((data) => setMyOrder(data));
   }, [order]);
