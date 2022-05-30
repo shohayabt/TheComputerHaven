@@ -4,9 +4,9 @@ const Portfolio = () => {
   return (
     <section className="my-portfolio px-10">
       <div className="title">
-        <h1>WELCOME TO MY PROTFOLIO</h1>{" "}
+        <h1>WELCOME TO MY PROTFOLIO</h1>
       </div>
-      <div className="skills grid grid-cols-2 gap-4">
+      <div className="skills grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="web-skills">
           <h1>HTML</h1>
           <progress

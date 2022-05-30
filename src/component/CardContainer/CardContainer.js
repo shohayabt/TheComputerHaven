@@ -12,9 +12,9 @@ const CardContainer = () => {
   }, []);
 
   return (
-    <section className="px-10 pb-12">
+    <section className="px-0 lg:px-10 pb-12">
       <div className="title">PRODUCTS</div>
-      <div className="card-contianer grid gap-4 grid-cols-3">
+      <div className="card-contianer grid gap-4 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center items-center">
         {product.map((product) => (
           <Card key={product._id} product={product}></Card>
         ))}

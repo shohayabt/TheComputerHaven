@@ -82,11 +82,11 @@ const PurchasePage = () => {
     event.target.reset(); // to reset form value
   };
   return (
-    <div className="flex justify-center gap-8 mt-8">
-      <div>
+    <div className="flex-col lg:flex justify-center gap-8 mt-8">
+      <div className="w-full flex-col">
         <div className="card-item">
           <div>
-            <img className="w-56" src={tool?.img} alt="" />
+            <img className="w-frll" src={tool?.img} alt="" />
           </div>
           <div>
             <p className="tool-title">{tool?.name}</p>
