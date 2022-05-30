@@ -82,11 +82,11 @@ const PurchasePage = () => {
     event.target.reset(); // to reset form value
   };
   return (
-    <div className="flex-col lg:flex justify-center gap-8 mt-8">
-      <div className="w-full flex-col">
+    <div className="flex flex-col justify-center">
+      <div className="w-full flex-col lg:flex">
         <div className="card-item">
           <div>
-            <img className="w-frll" src={tool?.img} alt="" />
+            <img className="w-full" src={tool?.img} alt="" />
           </div>
           <div>
             <p className="tool-title">{tool?.name}</p>
@@ -109,7 +109,7 @@ const PurchasePage = () => {
       </div>
 
       <form
-        className="flex flex-col justify-center items-center mt-5 lg:w-96 xs:w-xs"
+        className="flex flex-col justify-center items-center mt-5 lg:w-96 xs:w-xs lg:ml-20"
         onSubmit={handleOrder}
       >
         <input
