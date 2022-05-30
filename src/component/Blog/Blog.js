@@ -17,6 +17,33 @@ const Blog = () => {
         </div>
         <div className="my-5">
           <h1 className="text-2xl font-bold">
+            How will you improve the performance of a React Application?
+          </h1>
+          <p>
+            I will improve my React App Performance by Using Throttling and
+            Debouncing Learn how to improve performance by implementing
+            throttling and debouncing with lodash, underscore or RxJs W hen
+            building an app using React, we always have this problem of limiting
+            the number of expensive calls, async network requests and DOM
+            updates.
+          </p>
+        </div>
+        <div className="my-5">
+          <h1 className="text-2xl font-bold">
+            What are the different ways to manage a state in a React
+            application?
+          </h1>
+          <p>
+            A state is just a javascript object which holds information of the
+            component which can affect the output of the render function. You
+            can manage the state within the component, and whenever you change
+            the state, React re-renders the component. There are two ways you
+            can change the state: one is using this.state and another one is
+            this.setState.
+          </p>
+        </div>
+        <div className="my-5">
+          <h1 className="text-2xl font-bold">
             What are the different ways to manage a state in a React
             application?
           </h1>
